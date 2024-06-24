@@ -27,9 +27,9 @@ jobs:
       - name: Install Project
         run: pip install '.[test]'
       - name: Run tests
-        run: pytest -v --junitxml=test=result.xml
-      - name: Publish junit result
-        run: EnricoMi/publish-unit-test-result-action@v1
+        run: pytest -v --junitxml=test-result.xml
+      - name: publish junit results
+        uses: EnricoMi/publish-unit-test-result-action@v1
         if: always()
         with:
           files: test-result.xml
