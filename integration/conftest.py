@@ -6,5 +6,9 @@ medium: Medium priority
 low: Low priority
 """
 
+
 def pytest_configure(config):
-    map(lambda line: config.addinivalue_line("markers", line), MARKER.split("\n"))
+    map(
+        lambda line: config.addinivalue_line("markers", line),
+        MARKER.split("\n"),
+    )
