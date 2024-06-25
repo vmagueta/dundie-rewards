@@ -11,6 +11,7 @@ def test_load_positive_call_load_command():
     ).decode("utf-8").split("\n")
     assert len(out) == 2
 
+
 @pytest.mark.integration
 @pytest.mark.medium
 @pytest.mark.parametrize("wrong_command", ["loady", "carrega", "start"])
