@@ -35,7 +35,7 @@ jobs:
           files: test-result.xml
           check_name: Test Result (Python ${{matrix.python-version}})
           permissions:
-            contents: read
-            issues: read
-            checks: write
-            pull-requests: write
+          contents: read
+          issues: read
+          checks: write
+          pull-requests: write
