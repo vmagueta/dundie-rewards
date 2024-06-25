@@ -19,7 +19,7 @@ test:
 
 
 testci:
-	@.venv/bin/pytest -v --junitxml=test-result.xml
+	@.venv/bin/pytest --junitxml=test-result.xml
 
 
 watch:
