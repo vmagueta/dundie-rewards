@@ -4,7 +4,7 @@ from dundie.core import load
 
 def main():
     parser = argparse.ArgumentParser(
-        description="Dundler Mifflin Rewards CLI",
+        description="Dunder Mifflin Rewards CLI",
         epilog="Enjoy and use with cautious.",
     )
     parser.add_argument(
