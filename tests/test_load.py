@@ -7,8 +7,8 @@ from .constants import PEOPLE_FILE
 
 @pytest.mark.unit
 @pytest.mark.high
-def test_load_positive_has_2_people(request):
-    """Test load function has 2 people."""
+def test_load_positive_has_3_people(request):
+    """Test load function has 3 people."""
     assert len(load(PEOPLE_FILE)) == 3
 
 
