@@ -24,12 +24,12 @@ lint:
 
 
 test:
-	@.venv/bin/pytest -s
+	@.venv/bin/pytest -s --forked
 
 
 watch:
 	# @.venv/bin/ptw
-	@ls **/*.py | entr pytest
+	@ls **/*.py | entr pytest --forked
 
 
 clean:            ## Clean unused files.
