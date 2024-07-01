@@ -17,8 +17,8 @@
         }
     },
     "balance": {
-        "jim@dundermifflin.com": 500,
-        "schrute@dundermifflin.com": 100,
+        "jim@dundermifflin.com": 810,
+        "schrute@dundermifflin.com": 410,
         "glewis@dundermifflin.com": 100
     },
     "movement": {
@@ -27,6 +27,41 @@
                 "date": "2024-06-30T13:17:00.085814",
                 "actor": "system",
                 "value": 500
+            },
+            {
+                "date": "2024-07-01T09:38:03.015041",
+                "actor": "solermvictor",
+                "value": 30
+            },
+            {
+                "date": "2024-07-01T09:38:15.965008",
+                "actor": "solermvictor",
+                "value": 332
+            },
+            {
+                "date": "2024-07-01T09:43:45.392936",
+                "actor": "solermvictor",
+                "value": -62
+            },
+            {
+                "date": "2024-07-01T09:45:45.790470",
+                "actor": "solermvictor",
+                "value": 62
+            },
+            {
+                "date": "2024-07-01T09:45:52.961517",
+                "actor": "solermvictor",
+                "value": -62
+            },
+            {
+                "date": "2024-07-01T09:47:39.710349",
+                "actor": "solermvictor",
+                "value": 5
+            },
+            {
+                "date": "2024-07-01T09:47:47.852407",
+                "actor": "solermvictor",
+                "value": 5
             }
         ],
         "schrute@dundermifflin.com": [
@@ -34,6 +69,41 @@
                 "date": "2024-06-30T13:17:00.086117",
                 "actor": "system",
                 "value": 100
+            },
+            {
+                "date": "2024-07-01T09:38:03.015054",
+                "actor": "solermvictor",
+                "value": 30
+            },
+            {
+                "date": "2024-07-01T09:38:15.965025",
+                "actor": "solermvictor",
+                "value": 332
+            },
+            {
+                "date": "2024-07-01T09:43:45.392949",
+                "actor": "solermvictor",
+                "value": -62
+            },
+            {
+                "date": "2024-07-01T09:45:45.790483",
+                "actor": "solermvictor",
+                "value": 62
+            },
+            {
+                "date": "2024-07-01T09:45:52.961531",
+                "actor": "solermvictor",
+                "value": -62
+            },
+            {
+                "date": "2024-07-01T09:47:39.710364",
+                "actor": "solermvictor",
+                "value": 5
+            },
+            {
+                "date": "2024-07-01T09:47:47.852421",
+                "actor": "solermvictor",
+                "value": 5
             }
         ],
         "glewis@dundermifflin.com": [
