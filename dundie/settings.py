@@ -1,3 +1,5 @@
+"""Settings for e-mail, SMTP and paths to functions in the module Dundie."""
+
 import os
 
 SMTP_HOST = "Localhost"

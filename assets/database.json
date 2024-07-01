@@ -17,9 +17,9 @@
         }
     },
     "balance": {
-        "jim@dundermifflin.com": 810,
-        "schrute@dundermifflin.com": 410,
-        "glewis@dundermifflin.com": 100
+        "jim@dundermifflin.com": 653,
+        "schrute@dundermifflin.com": 253,
+        "glewis@dundermifflin.com": 200
     },
     "movement": {
         "jim@dundermifflin.com": [
@@ -62,6 +62,16 @@
                 "date": "2024-07-01T09:47:47.852407",
                 "actor": "solermvictor",
                 "value": 5
+            },
+            {
+                "date": "2024-07-01T10:28:44.587618",
+                "actor": "solermvictor",
+                "value": -257
+            },
+            {
+                "date": "2024-07-01T10:29:00.532653",
+                "actor": "solermvictor",
+                "value": 100
             }
         ],
         "schrute@dundermifflin.com": [
@@ -104,12 +114,27 @@
                 "date": "2024-07-01T09:47:47.852421",
                 "actor": "solermvictor",
                 "value": 5
+            },
+            {
+                "date": "2024-07-01T10:28:44.587632",
+                "actor": "solermvictor",
+                "value": -257
+            },
+            {
+                "date": "2024-07-01T10:29:00.532668",
+                "actor": "solermvictor",
+                "value": 100
             }
         ],
         "glewis@dundermifflin.com": [
             {
                 "date": "2024-06-30T13:17:00.086294",
                 "actor": "system",
+                "value": 100
+            },
+            {
+                "date": "2024-07-01T10:28:22.353956",
+                "actor": "solermvictor",
                 "value": 100
             }
         ]

@@ -1,9 +1,12 @@
+"""Setup for dundie."""
+
 import os
 from setuptools import setup, find_packages
 
 
 def read(*paths):
     """Read the contents of a text file safely.
+
     >>> read("dundie", "VERSION")
     '0.1.0'
     >>> read("README.md")

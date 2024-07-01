@@ -1,3 +1,5 @@
+"""Configuration of the log."""
+
 import logging
 import os
 from logging import handlers
@@ -11,7 +13,7 @@ fmt = logging.Formatter(
 
 
 def get_logger(logfile="dundie.log"):
-    """Returns a configured logger."""
+    """Return a configured logger."""
     # ch = logging.StreamHandler()  # Console/terminal/stderr
     # ch.setLevel(log_level)
     fh = handlers.RotatingFileHandler(
