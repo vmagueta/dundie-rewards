@@ -1,3 +1,5 @@
+"""Test the function read."""
+
 import pytest
 
 from dundie.core import read
@@ -6,6 +8,7 @@ from dundie.database import add_person, commit, connect
 
 @pytest.mark.unit
 def test_read_with_query():
+    """Test the function read passing query of dept and email."""
     db = connect()
 
     pk = "joe@doe.com"

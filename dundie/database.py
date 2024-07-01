@@ -1,3 +1,5 @@
+"""Main functions to access, commit and make alterations into the database."""
+
 import json
 from datetime import datetime
 
@@ -9,7 +11,7 @@ EMPTY_DB = {"people": {}, "balance": {}, "movement": {}, "users": {}}
 
 
 def connect() -> dict:
-    """Connects to the database, returns dict data."""
+    """Connect to the database, returns dict data."""
     try:
         with open(DATABASE_PATH, "r") as database_file:
             return json.loads(database_file.read())
@@ -27,7 +29,7 @@ def commit(db):
 
 
 def add_person(db, pk, data):
-    """Saves person data to database.
+    """Save person data to database.
 
     - E-mail is unique (resolved by dictonary hash table)
     - If exists, update, else create
@@ -51,7 +53,7 @@ def add_person(db, pk, data):
 
 
 def set_initial_password(db, pk):
-    """Generates and saves password."""
+    """Generate and save password."""
     db["users"].setdefault(pk, {})
     db["users"][pk]["password"] = generate_simple_password(8)
     return db["users"][pk]["password"]
@@ -64,6 +66,12 @@ def set_initial_balance(db, pk, person):
 
 
 def add_movement(db, pk, value, actor="system"):
+    """Add movement to user account.
+
+    Example::
+
+        add_movement(db, "me@me.com", 100, "me")
+    """
     movements = db["movement"].setdefault(pk, [])
     movements.append(
         {"date": datetime.now().isoformat(), "actor": actor, "value": value}

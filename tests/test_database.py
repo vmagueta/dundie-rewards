@@ -1,3 +1,5 @@
+"""Tests the database."""
+
 import pytest
 
 from dundie.database import EMPTY_DB, add_movement, add_person, commit, connect
@@ -5,12 +7,14 @@ from dundie.database import EMPTY_DB, add_movement, add_person, commit, connect
 
 @pytest.mark.unit
 def test_database_schema():
+    """Test the schema of database."""
     db = connect()
     assert db.keys() == EMPTY_DB.keys()
 
 
 @pytest.mark.unit
 def test_commit_to_database():
+    """Test the function commit to the database."""
     db = connect()
     data = {"name": "Joe Doe", "role": "Salesman", "dept": "Sales"}
     db["people"]["joe@doe.com"] = data
@@ -22,6 +26,7 @@ def test_commit_to_database():
 
 @pytest.mark.unit
 def test_add_person_for_the_first_time():
+    """Test the add person to the db for the first time."""
     pk = "joe@doe.com"
     data = {"role": "Salesman", "dept": "Sales", "name": "Joe Doe"}
     db = connect()
@@ -38,12 +43,14 @@ def test_add_person_for_the_first_time():
 
 @pytest.mark.unit
 def test_negative_add_person_invalid_email():
+    """Test if invalid email is going to raise a Value Error."""
     with pytest.raises(ValueError):
         add_person({}, ".@bla", {})
 
 
 @pytest.mark.unit
 def test_add_or_remove_points_for_person():
+    """Test add two persons and add and remove points of them."""
     pk = "joe@doe.com"
     data = {"role": "Salesman", "dept": "Sales", "name": "Joe Doe"}
     db = connect()

@@ -1,3 +1,5 @@
+"""Test the dundie's utils function."""
+
 import pytest
 
 from dundie.utils.email import check_valid_email
@@ -22,7 +24,8 @@ def test_negative_check_valid_email(address):
 
 @pytest.mark.unit
 def test_generate_simple_password():
-    """Test generation of random simple passwords
+    """Test generation of random simple passwords.
+
     TODO: Generate hashed complex passwords, encrypit it
     """
     passwords = []

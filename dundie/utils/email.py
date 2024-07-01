@@ -1,3 +1,5 @@
+"""Functions that check and send an email to the user."""
+
 import re
 import smtplib
 from email.mime.text import MIMEText
@@ -16,7 +18,7 @@ def check_valid_email(address):
 
 
 def send_email(from_, to, subject, text):
-    """Sends an email to the colaborator"""
+    """Send an email to the colaborator."""
     if not isinstance(to, list):
         to = [to]
 
