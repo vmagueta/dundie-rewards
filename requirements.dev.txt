@@ -7,7 +7,6 @@ pytest-watch
 # Code Quality
 flake8
 pyproject-flake8
-flake8-docstrings
 black
 isort
 

@@ -2,23 +2,24 @@
 
 import pytest
 
-from dundie.core import add
+from dundie.core import add, load, read
 from dundie.database import add_person, commit, connect
+from dundie.models import Balance, Person
+from tests.constants import PEOPLE_FILE
 
 
 @pytest.mark.unit
 def test_add_movement():
-    """Add two person into the db, and tests movements into the balance."""
     db = connect()
 
     pk = "joe@doe.com"
     data = {"role": "Salesman", "dept": "Sales", "name": "Joe Doe"}
-    person, created = add_person(db, pk, data)
+    _, created = add_person(db, Person(pk=pk, **data))
     assert created is True
 
     pk = "jim@doe.com"
     data = {"role": "Manager", "dept": "Management", "name": "Jim Doe"}
-    person, created = add_person(db, pk, data)
+    _, created = add_person(db, Person(pk=pk, **data))
     assert created is True
 
     commit(db)
@@ -27,5 +28,29 @@ def test_add_movement():
     add(90, dept="Management")
 
     db = connect()
-    assert db["balance"]["joe@doe.com"] == 470
-    assert db["balance"]["jim@doe.com"] == 190
+    assert db[Balance].get_by_pk("joe@doe.com").value == 470
+    assert db[Balance].get_by_pk("jim@doe.com").value == 190
+
+
+@pytest.mark.unit
+def test_add_balance_for_dept():
+    load(PEOPLE_FILE)
+    original = read(dept="Sales")
+
+    add(100, dept="Sales")
+
+    modified = read(dept="Sales")
+    for index, person in enumerate(modified):
+        assert person["balance"] == original[index]["balance"] + 100
+
+
+@pytest.mark.unit
+def test_add_balance_for_person():
+    load(PEOPLE_FILE)
+    original = read(email="jim@dundermifflin.com")
+
+    add(-30, email="jim@dundermifflin.com")
+
+    modified = read(email="jim@dundermifflin.com")
+    for index, person in enumerate(modified):
+        assert person["balance"] == original[index]["balance"] - 30

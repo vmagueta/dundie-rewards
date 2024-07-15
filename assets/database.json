@@ -14,12 +14,18 @@
             "name": "Gabe Lewis",
             "dept": "C-Level",
             "role": "CEO"
+        },
+        "pam@dundermifflin.com": {
+            "name": "Pam Beasly",
+            "dept": "General",
+            "role": "Recepcionist"
         }
     },
     "balance": {
         "jim@dundermifflin.com": 653,
         "schrute@dundermifflin.com": 253,
-        "glewis@dundermifflin.com": 200
+        "glewis@dundermifflin.com": 200,
+        "pam@dundermifflin.com": 500
     },
     "movement": {
         "jim@dundermifflin.com": [
@@ -72,6 +78,16 @@
                 "date": "2024-07-01T10:29:00.532653",
                 "actor": "solermvictor",
                 "value": 100
+            },
+            {
+                "date": "2024-07-19T14:41:20.573189",
+                "actor": "solermvictor",
+                "value": 5
+            },
+            {
+                "date": "2024-07-19T14:42:12.498918",
+                "actor": "solermvictor",
+                "value": -5
             }
         ],
         "schrute@dundermifflin.com": [
@@ -124,6 +140,16 @@
                 "date": "2024-07-01T10:29:00.532668",
                 "actor": "solermvictor",
                 "value": 100
+            },
+            {
+                "date": "2024-07-19T14:41:20.573205",
+                "actor": "solermvictor",
+                "value": 5
+            },
+            {
+                "date": "2024-07-19T14:42:12.498933",
+                "actor": "solermvictor",
+                "value": -5
             }
         ],
         "glewis@dundermifflin.com": [
@@ -136,6 +162,33 @@
                 "date": "2024-07-01T10:28:22.353956",
                 "actor": "solermvictor",
                 "value": 100
+            },
+            {
+                "date": "2024-07-19T14:41:20.573209",
+                "actor": "solermvictor",
+                "value": 5
+            },
+            {
+                "date": "2024-07-19T14:42:12.498938",
+                "actor": "solermvictor",
+                "value": -5
+            }
+        ],
+        "pam@dundermifflin.com": [
+            {
+                "date": "2024-07-15T18:20:06.454769",
+                "actor": "system",
+                "value": 500
+            },
+            {
+                "date": "2024-07-19T14:41:20.573212",
+                "actor": "solermvictor",
+                "value": 5
+            },
+            {
+                "date": "2024-07-19T14:42:12.498940",
+                "actor": "solermvictor",
+                "value": -5
             }
         ]
     },
@@ -148,6 +201,9 @@
         },
         "glewis@dundermifflin.com": {
             "password": "SR2jr3iG"
+        },
+        "pam@dundermifflin.com": {
+            "password": "BdO3tMuX"
         }
     }
 }
