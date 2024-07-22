@@ -22,173 +22,193 @@
         }
     },
     "balance": {
-        "jim@dundermifflin.com": 653,
-        "schrute@dundermifflin.com": 253,
-        "glewis@dundermifflin.com": 200,
-        "pam@dundermifflin.com": 500
+        "jim@dundermifflin.com": "658",
+        "schrute@dundermifflin.com": "258",
+        "glewis@dundermifflin.com": "205",
+        "pam@dundermifflin.com": "505"
     },
     "movement": {
         "jim@dundermifflin.com": [
             {
-                "date": "2024-06-30T13:17:00.085814",
                 "actor": "system",
-                "value": 500
+                "value": "500",
+                "date": "2024-06-30T13:17:00.085814"
             },
             {
-                "date": "2024-07-01T09:38:03.015041",
                 "actor": "solermvictor",
-                "value": 30
+                "value": "30",
+                "date": "2024-07-01T09:38:03.015041"
             },
             {
-                "date": "2024-07-01T09:38:15.965008",
                 "actor": "solermvictor",
-                "value": 332
+                "value": "332",
+                "date": "2024-07-01T09:38:15.965008"
             },
             {
-                "date": "2024-07-01T09:43:45.392936",
                 "actor": "solermvictor",
-                "value": -62
+                "value": "-62",
+                "date": "2024-07-01T09:43:45.392936"
             },
             {
-                "date": "2024-07-01T09:45:45.790470",
                 "actor": "solermvictor",
-                "value": 62
+                "value": "62",
+                "date": "2024-07-01T09:45:45.790470"
             },
             {
-                "date": "2024-07-01T09:45:52.961517",
                 "actor": "solermvictor",
-                "value": -62
+                "value": "-62",
+                "date": "2024-07-01T09:45:52.961517"
             },
             {
-                "date": "2024-07-01T09:47:39.710349",
                 "actor": "solermvictor",
-                "value": 5
+                "value": "5",
+                "date": "2024-07-01T09:47:39.710349"
             },
             {
-                "date": "2024-07-01T09:47:47.852407",
                 "actor": "solermvictor",
-                "value": 5
+                "value": "5",
+                "date": "2024-07-01T09:47:47.852407"
             },
             {
-                "date": "2024-07-01T10:28:44.587618",
                 "actor": "solermvictor",
-                "value": -257
+                "value": "-257",
+                "date": "2024-07-01T10:28:44.587618"
             },
             {
-                "date": "2024-07-01T10:29:00.532653",
                 "actor": "solermvictor",
-                "value": 100
+                "value": "100",
+                "date": "2024-07-01T10:29:00.532653"
             },
             {
-                "date": "2024-07-19T14:41:20.573189",
                 "actor": "solermvictor",
-                "value": 5
+                "value": "5",
+                "date": "2024-07-19T14:41:20.573189"
             },
             {
-                "date": "2024-07-19T14:42:12.498918",
                 "actor": "solermvictor",
-                "value": -5
+                "value": "-5",
+                "date": "2024-07-19T14:42:12.498918"
+            },
+            {
+                "actor": "solermvictor",
+                "value": "5",
+                "date": "2024-07-22T09:53:14.006612"
             }
         ],
         "schrute@dundermifflin.com": [
             {
-                "date": "2024-06-30T13:17:00.086117",
                 "actor": "system",
-                "value": 100
+                "value": "100",
+                "date": "2024-06-30T13:17:00.086117"
             },
             {
-                "date": "2024-07-01T09:38:03.015054",
                 "actor": "solermvictor",
-                "value": 30
+                "value": "30",
+                "date": "2024-07-01T09:38:03.015054"
             },
             {
-                "date": "2024-07-01T09:38:15.965025",
                 "actor": "solermvictor",
-                "value": 332
+                "value": "332",
+                "date": "2024-07-01T09:38:15.965025"
             },
             {
-                "date": "2024-07-01T09:43:45.392949",
                 "actor": "solermvictor",
-                "value": -62
+                "value": "-62",
+                "date": "2024-07-01T09:43:45.392949"
             },
             {
-                "date": "2024-07-01T09:45:45.790483",
                 "actor": "solermvictor",
-                "value": 62
+                "value": "62",
+                "date": "2024-07-01T09:45:45.790483"
             },
             {
-                "date": "2024-07-01T09:45:52.961531",
                 "actor": "solermvictor",
-                "value": -62
+                "value": "-62",
+                "date": "2024-07-01T09:45:52.961531"
             },
             {
-                "date": "2024-07-01T09:47:39.710364",
                 "actor": "solermvictor",
-                "value": 5
+                "value": "5",
+                "date": "2024-07-01T09:47:39.710364"
             },
             {
-                "date": "2024-07-01T09:47:47.852421",
                 "actor": "solermvictor",
-                "value": 5
+                "value": "5",
+                "date": "2024-07-01T09:47:47.852421"
             },
             {
-                "date": "2024-07-01T10:28:44.587632",
                 "actor": "solermvictor",
-                "value": -257
+                "value": "-257",
+                "date": "2024-07-01T10:28:44.587632"
             },
             {
-                "date": "2024-07-01T10:29:00.532668",
                 "actor": "solermvictor",
-                "value": 100
+                "value": "100",
+                "date": "2024-07-01T10:29:00.532668"
             },
             {
-                "date": "2024-07-19T14:41:20.573205",
                 "actor": "solermvictor",
-                "value": 5
+                "value": "5",
+                "date": "2024-07-19T14:41:20.573205"
             },
             {
-                "date": "2024-07-19T14:42:12.498933",
                 "actor": "solermvictor",
-                "value": -5
+                "value": "-5",
+                "date": "2024-07-19T14:42:12.498933"
+            },
+            {
+                "actor": "solermvictor",
+                "value": "5",
+                "date": "2024-07-22T09:53:14.006660"
             }
         ],
         "glewis@dundermifflin.com": [
             {
-                "date": "2024-06-30T13:17:00.086294",
                 "actor": "system",
-                "value": 100
+                "value": "100",
+                "date": "2024-06-30T13:17:00.086294"
             },
             {
-                "date": "2024-07-01T10:28:22.353956",
                 "actor": "solermvictor",
-                "value": 100
+                "value": "100",
+                "date": "2024-07-01T10:28:22.353956"
             },
             {
-                "date": "2024-07-19T14:41:20.573209",
                 "actor": "solermvictor",
-                "value": 5
+                "value": "5",
+                "date": "2024-07-19T14:41:20.573209"
             },
             {
-                "date": "2024-07-19T14:42:12.498938",
                 "actor": "solermvictor",
-                "value": -5
+                "value": "-5",
+                "date": "2024-07-19T14:42:12.498938"
+            },
+            {
+                "actor": "solermvictor",
+                "value": "5",
+                "date": "2024-07-22T09:53:14.006692"
             }
         ],
         "pam@dundermifflin.com": [
             {
-                "date": "2024-07-15T18:20:06.454769",
                 "actor": "system",
-                "value": 500
+                "value": "500",
+                "date": "2024-07-15T18:20:06.454769"
             },
             {
-                "date": "2024-07-19T14:41:20.573212",
                 "actor": "solermvictor",
-                "value": 5
+                "value": "5",
+                "date": "2024-07-19T14:41:20.573212"
             },
             {
-                "date": "2024-07-19T14:42:12.498940",
                 "actor": "solermvictor",
-                "value": -5
+                "value": "-5",
+                "date": "2024-07-19T14:42:12.498940"
+            },
+            {
+                "actor": "solermvictor",
+                "value": "5",
+                "date": "2024-07-22T09:53:14.006720"
             }
         ]
     },

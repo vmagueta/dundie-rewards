@@ -1,5 +1,5 @@
 # dev dependencies
-ipython>=8.0.0,<=8.25.0
+ipython>=7.0.0,<=8.0.0
 ipdb
 pudb
 pytest-watch
@@ -15,6 +15,10 @@ mkdocs
 
 # build
 wheel
+
+# typing
+mypy
+types-setuptools
 
 # Install project as editable
 -e .

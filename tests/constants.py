@@ -1,5 +1,3 @@
-"""Constants paths used on dundie's unit tests."""
-
 import os
 
 TEST_PATH = os.path.dirname(__file__)

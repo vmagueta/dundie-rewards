@@ -3,29 +3,27 @@
 
 install:
 	@echo "Installing for dev environment"
-	@.venv/bin/python -m pip install -e '.[dev]'
+	@.venv/bin/python -m pip install -e '.[test,dev]'
 
 
 virtualenv:
-	@.venv/bin/python -m pip venv .venv
+	@python -m venv .venv
 
 
 ipython:
 	@.venv/bin/ipython
 
 
+lint:
+	#@.venv/bin/mypy --ignore-missing-imports dundie
+	@.venv/bin/pflake8
+
 fmt:
 	@.venv/bin/isort --profile=black -m 3 dundie tests integration
 	@.venv/bin/black dundie tests integration
 
-
-lint:
-	@.venv/bin/pflake8
-
-
 test:
 	@.venv/bin/pytest -s --forked
-
 
 watch:
 	# @.venv/bin/ptw
@@ -55,14 +53,11 @@ docs:
 docs-serve:
 	@mkdocs serve
 
-
 build:
 	@python setup.py sdist bdist_wheel
-
 
 publish-test:
 	@twine upload --repository testpypi dist/*
 
-
 publish:
-	@twine updload dist/*
+	@twine upload dist/*

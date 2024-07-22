@@ -1,5 +1,3 @@
-"""Commandline Interface of Dundie."""
-
 import json
 from importlib import metadata
 
@@ -33,7 +31,7 @@ def main():
 @main.command()
 @click.argument("filepath", type=click.Path(exists=True))
 def load(filepath):
-    """Load the file to the database.
+    """Loads the file to the database.
 
     ## Features
 
@@ -42,7 +40,7 @@ def load(filepath):
     - Loads to database
     """
     table = Table(title="Dunder Mifflin Associates")
-    headers = ["name", "dept", "role", "created", "e-mail"]
+    headers = ["email", "name", "dept", "role", "created"]
     for header in headers:
         table.add_column(header, style="magenta")
 
@@ -59,14 +57,15 @@ def load(filepath):
 @click.option("--email", required=False)
 @click.option("--output", default=None)
 def show(output, **query):
-    """Show information about user or dept."""
+    """Shows information about user or dept."""
     result = core.read(**query)
     if output:
         with open(output, "w") as output_file:
             output_file.write(json.dumps(result))
 
-    if not result:
+    if len(result) == 0:
         print("Nothing to show")
+        return
 
     table = Table(title="Dunder Mifflin Report")
     for key in result[0]:
@@ -96,6 +95,6 @@ def add(ctx, value, **query):
 @click.option("--email", required=False)
 @click.pass_context
 def remove(ctx, value, **query):
-    """Remove points from the user or dept."""
+    """Removes points from the user or dept."""
     core.add(-value, **query)
     ctx.invoke(show, **query)
