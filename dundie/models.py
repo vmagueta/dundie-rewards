@@ -16,7 +16,9 @@ class InvalidEmailError(Exception):
 
 class Person(SQLModel, table=True):
     id: Optional[int] = Field(default=None, primary_key=True, index=True)
-    email: str = Field(nullable=False, index=True)
+    email: str = Field(
+        nullable=False, index=True, sa_column_kwargs={"unique": True}
+    )
     name: str = Field(nullable=False)
     dept: str = Field(nullable=False, index=True)
     role: str = Field(nullable=False)
@@ -25,6 +27,11 @@ class Person(SQLModel, table=True):
     balance: "Balance" = Relationship(back_populates="person")
     movement: "Movement" = Relationship(back_populates="person")
     user: "User" = Relationship(back_populates="person")
+
+    @property
+    def superuser(self):
+        # TODO: campo, verificacao em uma tabela RBAC
+        return self.email.split("@")[0] in ("schrute", "scott")
 
     @validator("email")
     def validate_email(cls, v: str) -> str:
@@ -38,12 +45,16 @@ class Person(SQLModel, table=True):
 
 class Balance(SQLModel, table=True):
     id: Optional[int] = Field(default=None, primary_key=True, index=True)
-    person_id: int = Field(foreign_key="person.id")
+    person_id: int = Field(
+        foreign_key="person.id",
+        sa_column_kwargs={"unique": True},
+        # there is only one balance for each person
+    )
     value: condecimal(decimal_places=3) = Field(default=0)
 
     person: Person = Relationship(back_populates="balance")
 
-    class ConfigDict:
+    class Config:
         json_encoders = {Person: lambda p: p.pk}
 
 
@@ -56,16 +67,18 @@ class Movement(SQLModel, table=True):
 
     person: Person = Relationship(back_populates="movement")
 
-    class ConfigDict:
+    class Config:
         json_encoders = {Person: lambda p: p.pk}
 
 
 class User(SQLModel, table=True):
     id: Optional[int] = Field(default=None, primary_key=True, index=True)
-    person_id: int = Field(foreign_key="person.id")
+    person_id: int = Field(
+        foreign_key="person.id", sa_column_kwargs={"unique": True}
+    )
     password: str = Field(default_factory=generate_simple_password)
 
     person: Person = Relationship(back_populates="user")
 
-    class ConfigDict:
+    class Config:
         json_encoders = {Person: lambda p: p.pk}

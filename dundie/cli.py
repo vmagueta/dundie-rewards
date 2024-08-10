@@ -1,6 +1,6 @@
 import json
-from importlib import metadata
 
+import pkg_resources
 import rich_click as click
 from rich.console import Console
 from rich.table import Table
@@ -16,7 +16,7 @@ click.rich_click.APPEND_METAVARS_HELP = True
 
 
 @click.group()
-@click.version_option(metadata.version("dundie"))
+@click.version_option(pkg_resources.get_distribution("dundie").version)
 def main():
     """Dunder Mifflin Rewards System.
 
@@ -65,7 +65,6 @@ def show(output, **query):
 
     if len(result) == 0:
         print("Nothing to show")
-        return
 
     table = Table(title="Dunder Mifflin Report")
     for key in result[0]:

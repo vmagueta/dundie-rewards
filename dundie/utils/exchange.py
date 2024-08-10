@@ -1,4 +1,5 @@
 from decimal import Decimal
+from typing import Dict, List
 
 import httpx
 from pydantic import BaseModel, Field
@@ -13,8 +14,8 @@ class USDRate(BaseModel):
     value: Decimal = Field(alias="high")
 
 
-def get_rates(currencies: list[str]) -> dict[str, USDRate]:
-    """Get current rate for USD vc Currency."""
+def get_rates(currencies: List[str]) -> Dict[str, USDRate]:
+    """Gets current rate for USD vs Currency"""
     return_data = {}
     for currency in currencies:
         if currency == "USD":
